@@ -14,6 +14,7 @@ public class Memoizer<A, V> implements Computable<A, V> {
 
     @Override
     public V compute(A arg) throws InterruptedException {
+        Executors.newFixedThreadPool(10);
         while (true) {
             Future<V> f = cache.get(arg);
             if (f == null) { // check if the computation was started

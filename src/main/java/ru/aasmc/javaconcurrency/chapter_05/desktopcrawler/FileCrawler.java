@@ -24,7 +24,6 @@ public class FileCrawler implements Runnable {
         } catch (InterruptedException e) {
             // Restore interrupted status
             Thread.currentThread().interrupt();
-            CountDownLatch
         }
     }
 
