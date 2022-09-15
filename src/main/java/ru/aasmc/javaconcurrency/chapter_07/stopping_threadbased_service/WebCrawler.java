@@ -21,8 +21,8 @@ public abstract class WebCrawler {
         exec = new TrackingExecutor(Executors.newCachedThreadPool());
         for (URL url : urlsToScan) {
             submitCrawlTask(url);
-            urlsToScan.clear();
         }
+        urlsToScan.clear();
     }
 
     public synchronized void stop() throws InterruptedException {

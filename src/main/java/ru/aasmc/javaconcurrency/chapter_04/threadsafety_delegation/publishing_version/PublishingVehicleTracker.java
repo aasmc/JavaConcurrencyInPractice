@@ -3,6 +3,7 @@ package ru.aasmc.javaconcurrency.chapter_04.threadsafety_delegation.publishing_v
 import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Executors;
 
 /**
  * Thread-safe class.
