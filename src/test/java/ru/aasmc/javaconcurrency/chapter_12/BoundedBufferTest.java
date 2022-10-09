@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class BoundedBufferTest {
 
-    private static final long LOCKUP_DETECT_TIMEOUT = 1000;
+    private static final long LOOCKUP_DETECT_TIMEOUT = 1000;
 
     @Test
     void testIsEmptyWhenConstructed() {
@@ -49,9 +49,9 @@ public class BoundedBufferTest {
 
         try {
             taker.start();
-            Thread.sleep(LOCKUP_DETECT_TIMEOUT);
+            Thread.sleep(LOOCKUP_DETECT_TIMEOUT);
             taker.interrupt();
-            taker.join(LOCKUP_DETECT_TIMEOUT);
+            taker.join(LOOCKUP_DETECT_TIMEOUT);
             assertFalse(taker.isAlive());
         } catch (InterruptedException e) {
             fail();
