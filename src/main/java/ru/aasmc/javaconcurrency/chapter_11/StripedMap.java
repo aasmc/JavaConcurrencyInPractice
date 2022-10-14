@@ -1,4 +1,4 @@
-package ru.aasmc.javaconcurrency.chapter_11.lock_striping;
+package ru.aasmc.javaconcurrency.chapter_11;
 
 public class StripedMap {
     private static final int N_LOCKS = 16;
